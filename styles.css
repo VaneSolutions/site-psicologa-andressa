@@ -776,8 +776,8 @@ textarea {
 
   .about-media img {
     max-height: none;
-    height: clamp(300px, 88vw, 520px);
-    object-position: center 8%;
+    height: clamp(340px, 100vw, 560px);
+    object-position: center 28%;
     border-radius: 14px;
   }
 
