@@ -777,7 +777,7 @@ textarea {
   .about-media img {
     max-height: none;
     height: clamp(300px, 88vw, 520px);
-    object-position: center 18%;
+    object-position: center 8%;
     border-radius: 14px;
   }
 
@@ -787,17 +787,26 @@ textarea {
 
   .process-item {
     grid-template-columns: 46px 1fr;
-    gap: 8px 14px;
+    gap: 8px 12px;
     padding: 18px 0;
+    align-items: baseline;
   }
 
   .process-item span {
-    grid-row: span 2;
+    grid-column: 1;
+    grid-row: 1;
     font-size: 1.28rem;
     line-height: 1.1;
   }
 
+  .process-item h3 {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
   .process-item p {
+    grid-column: 2;
+    grid-row: 2;
     color: var(--muted);
   }
 
@@ -896,15 +905,6 @@ textarea {
 
   .hero-media img {
     height: clamp(280px, 92vw, 420px);
-  }
-
-  .process-item {
-    grid-template-columns: 1fr;
-    gap: 8px;
-  }
-
-  .process-item span {
-    grid-row: auto;
   }
 
   .timeline article {
