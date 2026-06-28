@@ -150,8 +150,7 @@ main {
 .timeline,
 .faq-section,
 .online-layout,
-.contact-layout,
-.cta-band {
+.contact-layout {
   width: min(var(--max), calc(100% - 36px));
   margin-inline: auto;
 }
@@ -342,39 +341,6 @@ details p {
   border-bottom: 2px solid currentColor;
 }
 
-.cta-band {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 28px;
-  margin-bottom: clamp(42px, 7vw, 82px);
-  padding: clamp(28px, 5vw, 46px);
-  border-radius: var(--radius);
-  background: var(--sage);
-  color: var(--surface);
-}
-
-.cta-band h2,
-.cta-band .eyebrow,
-.cta-band p {
-  color: var(--surface);
-}
-
-.cta-band h2 {
-  font-size: clamp(1.8rem, 4vw, 2.8rem);
-}
-
-.cta-band p:not(.eyebrow) {
-  max-width: 650px;
-  margin-top: 12px;
-}
-
-.cta-band .button.primary {
-  background: var(--surface);
-  color: var(--moss);
-  min-width: max-content;
-}
-
 .page-hero {
   padding: clamp(64px, 9vw, 112px) 0 clamp(34px, 6vw, 64px);
 }
@@ -453,7 +419,7 @@ details p {
   grid-template-columns: minmax(0, 1fr) 360px;
   gap: clamp(22px, 5vw, 60px);
   align-items: start;
-  padding: clamp(54px, 8vw, 90px) 0;
+  padding: clamp(54px, 8vw, 90px) 0 clamp(42px, 7vw, 74px);
   border-top: 1px solid var(--line);
 }
 
@@ -602,6 +568,12 @@ textarea {
   box-shadow: 0 14px 32px rgba(47, 77, 60, 0.25);
 }
 
+.floating-whatsapp svg {
+  width: 31px;
+  height: 31px;
+  fill: currentColor;
+}
+
 @media (max-width: 768px) {
   html {
     scroll-padding-top: 74px;
@@ -671,8 +643,7 @@ textarea {
   .timeline,
   .faq-section,
   .online-layout,
-  .contact-layout,
-  .cta-band {
+  .contact-layout {
     width: min(100% - 32px, var(--max));
   }
 
@@ -731,7 +702,6 @@ textarea {
 
   .button,
   .hero-actions .button,
-  .cta-band .button,
   .contact-form .button {
     width: 100%;
   }
@@ -859,7 +829,6 @@ textarea {
     padding: 12px 13px;
   }
 
-  .cta-band,
   .site-footer {
     align-items: flex-start;
     flex-direction: column;
@@ -873,22 +842,8 @@ textarea {
     margin-inline: auto;
   }
 
-  .cta-band {
-    gap: 22px;
-    margin-bottom: 42px;
-    padding: 24px;
-  }
-
-  .cta-band h2 {
-    font-size: 1.85rem;
-  }
-
-  .cta-band .button.primary {
-    min-width: 0;
-  }
-
   .site-footer {
-    padding: 24px 16px 86px;
+    padding: 24px 16px 82px;
     font-size: 0.92rem;
   }
 
@@ -911,8 +866,7 @@ textarea {
   .timeline,
   .faq-section,
   .online-layout,
-  .contact-layout,
-  .cta-band {
+  .contact-layout {
     width: min(100% - 28px, var(--max));
   }
 
