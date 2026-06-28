@@ -26,27 +26,34 @@
 
     <main>
       <section class="admin-page">
-        <p class="eyebrow">Administração futura</p>
-        <h1>Área preparada para um painel editorial.</h1>
-        <p>Por enquanto, os posts são páginas estáticas no código para manter o site leve e estável. Quando for hora de permitir edição sem código, a solução mais adequada para Vercel + GitHub é usar um CMS Git-based.</p>
+        <p class="eyebrow">Administração do blog</p>
+        <h1>Painel editorial</h1>
+        <p>Crie, edite, publique ou arquive textos do blog. As alterações são salvas no GitHub e publicadas pela Vercel.</p>
 
-        <div class="admin-panel">
-          <h2>Solução recomendada</h2>
-          <p><strong>Decap CMS com backend GitHub</strong> é uma opção leve para este projeto estático: os textos ficam no repositório GitHub e a Vercel publica automaticamente após cada alteração.</p>
-          <p>Para funcionar em produção, será necessário configurar autenticação GitHub OAuth por uma função serverless na Vercel, porque o GitHub não deve expor o segredo de autenticação no navegador.</p>
+        <div class="admin-panel" id="admin-login" hidden>
+          <h2>Entrar</h2>
+          <p>Use uma conta GitHub com permissão de escrita no repositório do site.</p>
+          <a class="button primary" href="/api/auth">Entrar com GitHub</a>
         </div>
 
-        <div class="admin-panel">
-          <h2>Estrutura atual dos posts</h2>
-          <ul>
-            <li><code>blog.html</code> lista as publicações.</li>
-            <li><code>blog/esgotamento-alem-do-trabalho.html</code> é um artigo individual.</li>
-            <li><code>blog/culpa-ao-descansar.html</code> é um artigo individual.</li>
-            <li><code>blog/limites-sem-culpa.html</code> é um artigo individual.</li>
-          </ul>
+        <div class="admin-panel" id="admin-editor" hidden>
+          <div class="admin-toolbar">
+            <div>
+              <h2>Publicações</h2>
+              <p id="admin-status">Carregando posts...</p>
+            </div>
+            <div class="admin-actions">
+              <button class="button secondary" type="button" id="add-post">Novo post</button>
+              <button class="button primary" type="button" id="save-posts">Salvar alterações</button>
+              <button class="button secondary" type="button" id="logout">Sair</button>
+            </div>
+          </div>
+          <div class="admin-posts" id="admin-posts"></div>
         </div>
       </section>
     </main>
+
     <script src="/script.js"></script>
+    <script src="/admin.js"></script>
   </body>
 </html>

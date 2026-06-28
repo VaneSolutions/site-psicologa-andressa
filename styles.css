@@ -428,6 +428,18 @@ details p {
   color: var(--muted);
 }
 
+.blog-card-image,
+.article-image {
+  width: 100%;
+  object-fit: cover;
+  border-radius: var(--radius);
+}
+
+.blog-card-image {
+  height: 190px;
+  margin-bottom: 18px;
+}
+
 .blog-card .button {
   width: fit-content;
   min-height: 42px;
@@ -448,6 +460,17 @@ details p {
   margin-top: 20px;
   color: var(--muted);
   font-size: 1.06rem;
+}
+
+.article-image {
+  max-height: 420px;
+  margin-top: 28px;
+}
+
+.empty-state {
+  grid-column: 1 / -1;
+  color: var(--muted);
+  font-size: 1.05rem;
 }
 
 .back-link {
@@ -483,6 +506,51 @@ details p {
 .admin-panel code {
   color: var(--moss);
   font-weight: 700;
+}
+
+.admin-toolbar,
+.admin-post-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.admin-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.admin-posts {
+  display: grid;
+  gap: 18px;
+  margin-top: 24px;
+}
+
+.admin-post {
+  display: grid;
+  gap: 16px;
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+.admin-post h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.45rem;
+}
+
+select {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--ink);
+  font: inherit;
+  padding: 13px 14px;
 }
 
 .values-section {
@@ -1012,6 +1080,22 @@ textarea {
 
   .blog-card .button {
     width: 100%;
+  }
+
+  .admin-toolbar,
+  .admin-post-header,
+  .admin-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .admin-actions .button,
+  .admin-post-header .button {
+    width: 100%;
+  }
+
+  .admin-post {
+    padding: 18px;
   }
 
   .article-page {
