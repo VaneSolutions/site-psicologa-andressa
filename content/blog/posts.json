@@ -1,16 +1,6 @@
 {
   "posts": [
     {
-      "title": "Teste de Post",
-      "slug": "teste-de-post",
-      "category": "Teste",
-      "date": "2026-06-29",
-      "summary": "Teste teste teste teste",
-      "content": "Teste teste teste teste Teste teste teste teste Teste teste teste teste Teste teste teste teste Teste teste teste teste Teste teste teste teste",
-      "image": "",
-      "status": "published"
-    },
-    {
       "title": "O esgotamento nem sempre vem do trabalho remunerado",
       "slug": "esgotamento-alem-do-trabalho",
       "category": "Esgotamento",
