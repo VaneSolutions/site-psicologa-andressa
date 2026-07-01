@@ -125,7 +125,9 @@ function renderBlogPost(posts) {
     return;
   }
 
-  const slug = window.location.pathname.split("/").filter(Boolean).pop();
+  const urlSlug = new URLSearchParams(window.location.search).get("slug");
+  const pathSlug = window.location.pathname.split("/").filter(Boolean).pop();
+  const slug = urlSlug || pathSlug;
   const post = posts.find((item) => item.slug === slug && item.status === "published");
 
   if (!post) {
