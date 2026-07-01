@@ -1,12 +1,12 @@
 {
   "posts": [
     {
-      "title": "Teste de Post",
-      "slug": "teste-de-post",
-      "category": "Teste",
-      "date": "2026-06-29",
-      "summary": "Teste teste teste teste",
-      "content": "Teste teste teste teste Teste teste teste teste Teste teste teste teste Teste teste teste teste Teste teste teste teste Teste teste teste teste",
+      "title": "teste",
+      "slug": "teste",
+      "category": "teste",
+      "date": "2026-07-01",
+      "summary": "teste",
+      "content": "teste",
       "image": "",
       "status": "published"
     },
